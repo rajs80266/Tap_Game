@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tap</title>
+		<link rel="stylesheet" href="styles.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#btn").click(function(){
+					$("#btn").hide();
+					$x=100;
+					$y=100;		//all available
+					//$y=90;	//1 not available
+					//$y=80;	//2 not available
+					//$y=70;	//0 not available
+					//$y=60;	//0 available
+					//$y=50;	//2 available
+					//$y=40;	//1 available			
+					
+					while($x--)
+					{
+						while(1)
+						{
+							$random = Math.floor(Math.random()*3);
+							if($y==100)
+								break;
+							else if($y==90 && $random!=1)
+							{
+								if($random==2)
+									$y=60;
+								else
+									$y=50;
+								
+								break;
+							}
+							else if($y==80 && $random!=2)
+							{
+								if($random==1)
+									$y=60;
+								else
+									$y=40;
+								
+								break;
+							}
+							else if($y==70 && $random!=0)
+							{
+								if($random==1)
+									$y=50;
+								else
+									$y=40;
+								
+								break;
+							}
+							else if( ($y==60 && $random==0) || ($y==50 && $random==2) || ($y==40 && $random==1) )
+							{
+								$y=100;
+								break;
+							}
+						}
+						if($random==0)
+						{							
+							setTimeout(function(){
+								$("#a11").hide();
+								$("#b11").show();
+							},(((100-$x)*500)+0));
+							setTimeout(function(){
+								$("#a11").show();
+								$("#b11").hide();
+								$("#a21").hide();
+								$("#b21").show();
+							},(((100-$x)*500)+500));
+							setTimeout(function(){
+								$("#a21").show();
+								$("#b21").hide();
+								$("#a31").hide();
+								$("#b31").show();
+							},(((100-$x)*500)+1000));
+							setTimeout(function(){
+								$("#a31").show();
+								$("#b31").hide();
+								$("#a41").hide();
+								$("#b41").show();
+							},(((100-$x)*500)+1500));
+							setTimeout(function(){
+								$("#a41").show();
+								$("#b41").hide();
+							},(((100-$x)*500)+2000));
+						}
+						if($random==1)
+						{		
+							setTimeout(function(){
+								$("#a12").hide();
+								$("#b12").show();
+							},(((100-$x)*500)+0));
+							setTimeout(function(){
+								$("#a12").show();
+								$("#b12").hide();
+								$("#a22").hide();
+								$("#b22").show();
+							},(((100-$x)*500)+500));
+							setTimeout(function(){
+								$("#a22").show();
+								$("#b22").hide();
+								$("#a32").hide();
+								$("#b32").show();
+							},(((100-$x)*500)+1000));
+							setTimeout(function(){
+								$("#a32").show();
+								$("#b32").hide();
+								$("#a42").hide();
+								$("#b42").show();
+							},(((100-$x)*500)+1500));
+							setTimeout(function(){
+								$("#a42").show();
+								$("#b42").hide();
+							},(((100-$x)*500)+2000));
+						}
+						if($random==2)
+						{							
+							setTimeout(function(){
+								$("#a13").hide();
+								$("#b13").show();
+							},(((100-$x)*500)+0));
+							setTimeout(function(){
+								$("#a13").show();
+								$("#b13").hide();
+								$("#a23").hide();
+								$("#b23").show();
+							},(((100-$x)*500)+500));
+							setTimeout(function(){
+								$("#a23").show();
+								$("#b23").hide();
+								$("#a33").hide();
+								$("#b33").show();
+							},(((100-$x)*500)+1000));
+							setTimeout(function(){
+								$("#a33").show();
+								$("#b33").hide();
+								$("#a43").hide();
+								$("#b43").show();
+							},(((100-$x)*500)+1500));
+							setTimeout(function(){
+								$("#a43").show();
+								$("#b43").hide();
+							},(((100-$x)*500)+2000));
+						}
+					}
+				});
+			});	
+		</script>
+	</head>
+	<body>
+			<div>
+				<img src="black.png" id="b41">
+				<img src="white.png" id="a41">
+				<img src="black.png" id="b42">
+				<img src="white.png" id="a42">
+				<img src="black.png" id="b43">
+				<img src="white.png" id="a43">
+			</div>
+			<div>
+				<img src="black.png" id="b31">
+				<img src="white.png" id="a31">
+				<img src="black.png" id="b32">
+				<img src="white.png" id="a32">
+				<img src="black.png" id="b33">
+				<img src="white.png" id="a33">
+			</div>
+			<div>
+				<img src="black.png" id="b21">
+				<img src="white.png" id="a21">
+				<img src="black.png" id="b22">
+				<img src="white.png" id="a22">
+				<img src="black.png" id="b23">
+				<img src="white.png" id="a23">
+			</div>
+			<div>
+				<img src="black.png" id="b11">
+				<img src="white.png" id="a11">
+				<img src="black.png" id="b12">
+				<img src="white.png" id="a12">
+				<img src="black.png" id="b13">
+				<img src="white.png" id="a13">
+			</div>
+			<div>
+				<button id="btn"> Start </button>
+			</div>
+	</body>
+</html>

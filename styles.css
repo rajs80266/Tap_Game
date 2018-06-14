@@ -1,0 +1,20 @@
+#a41,#a42,#a43,#a31,#a32,#a33,#a21,#a22,#a23,#a11,#a12,#a13
+{
+	width:15%;
+}
+
+#b41,#b42,#b43,#b31,#b32,#b33,#b21,#b22,#b23,#b11,#b12,#b13
+{
+	width:15%;
+	display : none;
+}
+div
+{
+	margin : auto;
+	align : center;
+	width : 40%;
+}
+#btn
+{
+	width : 47%;
+}
