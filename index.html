@@ -7,6 +7,7 @@
 		<script>
 			$(document).ready(function(){
 				$score=0;
+					
 				$("#b11").click(function(){
 					if( $("#aR1").is(":hidden") && $("#aR2").is(":hidden") && $("#aR3").is(":hidden") )
 					{
@@ -116,8 +117,6 @@
 					}	
 				});
 				$("#btn").click(function(){
-					$("#btn").hide();
-					$t=500;
 					$x=100;
 					$y=100;		//all available
 					//$y=90;	//1 not available
@@ -126,6 +125,15 @@
 					//$y=60;	//0 available
 					//$y=50;	//2 available
 					//$y=40;	//1 available			
+					
+					$("#form").hide();
+					$("#btn").hide();
+					if($("#d").is(':checked'))
+						$t=600;
+					else if($("#m").is(':checked'))
+						$t=800;
+					else
+						$t=1000;
 					
 					while($x--)
 					{
@@ -216,6 +224,7 @@
 								if($flag==1 && $("#b41").is(":visible"))
 								{
 									$("#aR1").show();
+									$("#btnr").show();
 									$("#b41").hide();
 									$flag=0;
 								}
@@ -261,6 +270,7 @@
 								if($flag==1 && $("#b42").is(":visible"))
 								{
 									$("#aR2").show();
+									$("#btnr").show();
 									$("#b42").hide();
 									$flag=0;
 								}
@@ -306,6 +316,7 @@
 								if($flag==1 && $("#b43").is(":visible"))
 								{
 									$("#aR3").show();
+									$("#btnr").show();
 									$("#b43").hide();
 									$flag=0;
 								}
@@ -359,6 +370,13 @@
 			</div>
 			<div>
 				<button id="btn"> Start </button>
-			</div></center>
+				<button id="btnr">	<a href="index.html"> Want to Play Again? </a> </button>
+			</div>
+			<form id="form">
+				  <input type="radio" name="Level" id="e" checked> Easy
+				  <input type="radio" name="Level" id="m" > Medium
+				  <input type="radio" name="Level" id="d" > Difficult
+			</form>
+			</center>
 	</body>
 </html>

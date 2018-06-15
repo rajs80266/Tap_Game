@@ -20,6 +20,11 @@ div,h1
 {
 	width : 47%;
 }
+#btnr
+{
+	width : 47%;
+	display : none;
+}
 #y
 {
 	width : 40%;
