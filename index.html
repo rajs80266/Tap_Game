@@ -6,8 +6,118 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script>
 			$(document).ready(function(){
+				$score=0;
+				$("#b11").click(function(){
+					if( $("#aR1").is(":hidden") && $("#aR2").is(":hidden") && $("#aR3").is(":hidden") )
+					{
+						$score++;
+						document.getElementById("demo").innerHTML = $score;
+						$(this).hide();
+						$("#a11").show();
+					}
+				});
+				$("#b12").click(function(){
+					if( $("#aR1").is(":hidden") && $("#aR2").is(":hidden") && $("#aR3").is(":hidden") )
+					{
+						$score++;
+						document.getElementById("demo").innerHTML = $score;
+						$(this).hide();
+						$("#a12").show();
+					}	
+				});
+				$("#b13").click(function(){
+					if( $("#aR1").is(":hidden") && $("#aR2").is(":hidden") && $("#aR3").is(":hidden") )
+					{
+					$score++;
+						document.getElementById("demo").innerHTML = $score;
+						$(this).hide();
+						$("#a13").show();
+					}	
+				});
+				$("#b21").click(function(){
+					if( $("#aR1").is(":hidden") && $("#aR2").is(":hidden") && $("#aR3").is(":hidden") )
+					{
+						$score++;
+						document.getElementById("demo").innerHTML = $score;
+						$(this).hide();
+						$("#a21").show();
+					}	
+				});
+				$("#b22").click(function(){
+					if( $("#aR1").is(":hidden") && $("#aR2").is(":hidden") && $("#aR3").is(":hidden") )
+					{
+						$score++;
+						document.getElementById("demo").innerHTML = $score;
+						$(this).hide();
+						$("#a22").show();
+					}	
+				});
+				$("#b23").click(function(){
+					if( $("#aR1").is(":hidden") && $("#aR2").is(":hidden") && $("#aR3").is(":hidden") )
+					{
+						$score++;
+						document.getElementById("demo").innerHTML = $score;
+						$(this).hide();
+						$("#a23").show();
+					}	
+				});
+				$("#b31").click(function(){
+					if( $("#aR1").is(":hidden") && $("#aR2").is(":hidden") && $("#aR3").is(":hidden") )
+					{
+						$score++;
+						document.getElementById("demo").innerHTML = $score;
+						$(this).hide();
+						$("#a31").show();
+					}
+				});
+				$("#b32").click(function(){
+					if( $("#aR1").is(":hidden") && $("#aR2").is(":hidden") && $("#aR3").is(":hidden") )
+					{
+						$score++;
+						document.getElementById("demo").innerHTML = $score;
+						$(this).hide();
+						$("#a32").show();
+					}	
+				});
+				$("#b33").click(function(){
+					if( $("#aR1").is(":hidden") && $("#aR2").is(":hidden") && $("#aR3").is(":hidden") )
+					{
+						$score++;
+						document.getElementById("demo").innerHTML = $score;
+						$(this).hide();
+						$("#a33").show();
+					}
+				});
+				$("#b41").click(function(){
+					if( $("#aR1").is(":hidden") && $("#aR2").is(":hidden") && $("#aR3").is(":hidden") )
+					{
+						$score++;
+						document.getElementById("demo").innerHTML = $score;
+						$(this).hide();
+						$("#a41").show();
+					}	
+				});
+				$("#b42").click(function(){
+					if( $("#aR1").is(":hidden") && $("#aR2").is(":hidden") && $("#aR3").is(":hidden") )
+					{
+						$score++;
+						document.getElementById("demo").innerHTML = $score;
+						$(this).hide();
+						$("#a42").show();
+					}	
+				});
+				$("#b43").click(function(){
+					if( $("#aR1").is(":hidden") && $("#aR2").is(":hidden") && $("#aR3").is(":hidden") )
+					{
+						$score++;
+						document.getElementById("demo").innerHTML = $score;
+						$(this).hide();
+						$("#a43").show();
+					}	
+				});
 				$("#btn").click(function(){
 					$("#btn").hide();
+					$t=500;
 					$x=100;
 					$y=100;		//all available
 					//$y=90;	//1 not available
@@ -66,7 +176,6 @@
 								break;
 							}
 						}
-						
 						if($random==0)
 						{							
 							setTimeout(function(){
@@ -75,7 +184,7 @@
 									$("#a11").hide();
 									$("#b11").show();
 								}
-							},(((100-$x)*500)+0));
+							},(((100-$x)*$t)));
 							setTimeout(function(){
 								if($flag==1 && $("#b11").is(":visible"))
 								{
@@ -84,7 +193,7 @@
 									$("#a21").hide();
 									$("#b21").show();
 								}
-							},(((100-$x)*500)+500));
+							},(((101-$x)*$t)));
 							setTimeout(function(){
 								if($flag==1 && $("#b21").is(":visible"))
 								{
@@ -93,7 +202,7 @@
 									$("#a31").hide();
 									$("#b31").show();
 								}
-							},(((100-$x)*500)+1000));
+							},(((102-$x)*$t)));
 							setTimeout(function(){
 								if($flag==1 && $("#b31").is(":visible"))
 								{
@@ -102,7 +211,7 @@
 									$("#a41").hide();
 									$("#b41").show();
 								}
-							},(((100-$x)*500)+1500));
+							},(((103-$x)*$t)));
 							setTimeout(function(){
 								if($flag==1 && $("#b41").is(":visible"))
 								{
@@ -110,7 +219,7 @@
 									$("#b41").hide();
 									$flag=0;
 								}
-							},(((100-$x)*500)+2000));
+							},(((104-$x)*$t)));
 						}
 						if($random==1)
 						{		
@@ -120,7 +229,7 @@
 									$("#a12").hide();
 									$("#b12").show();
 								}
-							},(((100-$x)*500)+0));
+							},(((100-$x)*$t)));
 							setTimeout(function(){
 								if($flag==1 && $("#b12").is(":visible"))
 								{
@@ -129,7 +238,7 @@
 									$("#a22").hide();
 									$("#b22").show();
 								}
-							},(((100-$x)*500)+500));
+							},(((101-$x)*$t)));
 							setTimeout(function(){
 								if($flag==1 && $("#b22").is(":visible"))
 								{
@@ -138,7 +247,7 @@
 									$("#a32").hide();
 									$("#b32").show();
 								}
-							},(((100-$x)*500)+1000));
+							},(((102-$x)*$t)));
 							setTimeout(function(){
 								if($flag==1 && $("#b32").is(":visible"))
 								{
@@ -147,7 +256,7 @@
 									$("#a42").hide();
 									$("#b42").show();
 								}
-							},(((100-$x)*500)+1500));
+							},(((103-$x)*$t)));
 							setTimeout(function(){
 								if($flag==1 && $("#b42").is(":visible"))
 								{
@@ -155,7 +264,7 @@
 									$("#b42").hide();
 									$flag=0;
 								}
-							},(((100-$x)*500)+2000));
+							},(((104-$x)*$t)));
 						}
 						if($random==2)
 						{				
@@ -165,7 +274,7 @@
 									$("#a13").hide();
 									$("#b13").show();
 								}
-							},(((100-$x)*500)+0));
+							},(((100-$x)*$t)));
 							setTimeout(function(){
 								if($flag==1 && $("#b13").is(":visible"))
 								{
@@ -174,7 +283,7 @@
 									$("#a23").hide();
 									$("#b23").show();
 								}
-							},(((100-$x)*500)+500));
+							},(((101-$x)*$t)));
 							setTimeout(function(){
 								if($flag==1 && $("#b23").is(":visible"))
 								{
@@ -183,7 +292,7 @@
 									$("#a33").hide();
 									$("#b33").show();
 								}
-							},(((100-$x)*500)+1000));
+							},(((102-$x)*$t)));
 							setTimeout(function(){
 								if($flag==1 && $("#b33").is(":visible"))
 								{
@@ -192,7 +301,7 @@
 									$("#a43").hide();
 									$("#b43").show();
 								}
-							},(((100-$x)*500)+1500));
+							},(((103-$x)*$t)));
 							setTimeout(function(){
 								if($flag==1 && $("#b43").is(":visible"))
 								{
@@ -200,62 +309,19 @@
 									$("#b43").hide();
 									$flag=0;
 								}
-							},(((100-$x)*500)+2000));
+							},(((104-$x)*$t)));
 						}
 					}
-				});
-				$("#b11").click(function(){
-					$(this).hide();
-					$("#a11").show();
-				});
-				$("#b12").click(function(){
-					$(this).hide();
-					$("#a12").show();
-				});
-				$("#b13").click(function(){
-					$(this).hide();
-					$("#a13").show();
-				});
-				$("#b21").click(function(){
-					$(this).hide();
-					$("#a21").show();
-				});
-				$("#b22").click(function(){
-					$(this).hide();
-					$("#a22").show();
-				});
-				$("#b23").click(function(){
-					$(this).hide();
-					$("#a23").show();
-				});
-				$("#b31").click(function(){
-					$(this).hide();
-					$("#a31").show();
-				});
-				$("#b32").click(function(){
-					$(this).hide();
-					$("#a32").show();
-				});
-				$("#b33").click(function(){
-					$(this).hide();
-					$("#a33").show();
-				});
-				$("#b41").click(function(){
-					$(this).hide();
-					$("#a41").show();
-				});
-				$("#b42").click(function(){
-					$(this).hide();
-					$("#a42").show();
-				});
-				$("#b43").click(function(){
-					$(this).hide();
-					$("#a43").show();
 				});
 			});	
 		</script>
 	</head>
 	<body>
+			<center>
+			<div class="container">
+				<img src="yellow.png" id="y" alt="Snow">
+				<h1 class="centered" id="demo">0</h1>
+			</div>
 			<div>
 				<img src="black.png" id="b41">
 				<img src="white.png" id="a41">
@@ -293,6 +359,6 @@
 			</div>
 			<div>
 				<button id="btn"> Start </button>
-			</div>
+			</div></center>
 	</body>
 </html>

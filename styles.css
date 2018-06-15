@@ -1,14 +1,16 @@
 #a41,#a42,#a43,#a31,#a32,#a33,#a21,#a22,#a23,#a11,#a12,#a13
 {
 	width:15%;
+	height : 100px;
 }
 
 #b41,#b42,#b43,#b31,#b32,#b33,#b21,#b22,#b23,#b11,#b12,#b13,#aR3,#aR2,#aR1
 {
 	width:15%;
 	display : none;
+	height : 100px;
 }
-div
+div,h1
 {
 	margin : auto;
 	align : center;
@@ -17,4 +19,22 @@ div
 #btn
 {
 	width : 47%;
+}
+#y
+{
+	width : 40%;
+	height : 50px;
+}
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	color : darkblue;
 }
