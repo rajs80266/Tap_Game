@@ -19,11 +19,20 @@
 					
 					while($x--)
 					{
+						$flag=1;
 						while(1)
 						{
 							$random = Math.floor(Math.random()*3);
 							if($y==100)
+							{
+								if($random==1)
+									$y=90;
+								else if($random==2)
+									$y=80;
+								else
+									$y=70;
 								break;
+							}
 							else if($y==90 && $random!=1)
 							{
 								if($random==2)
@@ -57,94 +66,191 @@
 								break;
 							}
 						}
+						
 						if($random==0)
 						{							
 							setTimeout(function(){
-								$("#a11").hide();
-								$("#b11").show();
+								if($flag==1)
+								{
+									$("#a11").hide();
+									$("#b11").show();
+								}
 							},(((100-$x)*500)+0));
 							setTimeout(function(){
-								$("#a11").show();
-								$("#b11").hide();
-								$("#a21").hide();
-								$("#b21").show();
+								if($flag==1 && $("#b11").is(":visible"))
+								{
+									$("#a11").show();
+									$("#b11").hide();
+									$("#a21").hide();
+									$("#b21").show();
+								}
 							},(((100-$x)*500)+500));
 							setTimeout(function(){
-								$("#a21").show();
-								$("#b21").hide();
-								$("#a31").hide();
-								$("#b31").show();
+								if($flag==1 && $("#b21").is(":visible"))
+								{
+									$("#a21").show();
+									$("#b21").hide();
+									$("#a31").hide();
+									$("#b31").show();
+								}
 							},(((100-$x)*500)+1000));
 							setTimeout(function(){
-								$("#a31").show();
-								$("#b31").hide();
-								$("#a41").hide();
-								$("#b41").show();
+								if($flag==1 && $("#b31").is(":visible"))
+								{
+									$("#a31").show();
+									$("#b31").hide();
+									$("#a41").hide();
+									$("#b41").show();
+								}
 							},(((100-$x)*500)+1500));
 							setTimeout(function(){
-								$("#a41").show();
-								$("#b41").hide();
+								if($flag==1 && $("#b41").is(":visible"))
+								{
+									$("#aR1").show();
+									$("#b41").hide();
+									$flag=0;
+								}
 							},(((100-$x)*500)+2000));
 						}
 						if($random==1)
 						{		
 							setTimeout(function(){
-								$("#a12").hide();
-								$("#b12").show();
+								if($flag==1)
+								{
+									$("#a12").hide();
+									$("#b12").show();
+								}
 							},(((100-$x)*500)+0));
 							setTimeout(function(){
-								$("#a12").show();
-								$("#b12").hide();
-								$("#a22").hide();
-								$("#b22").show();
+								if($flag==1 && $("#b12").is(":visible"))
+								{
+									$("#a12").show();
+									$("#b12").hide();
+									$("#a22").hide();
+									$("#b22").show();
+								}
 							},(((100-$x)*500)+500));
 							setTimeout(function(){
-								$("#a22").show();
-								$("#b22").hide();
-								$("#a32").hide();
-								$("#b32").show();
+								if($flag==1 && $("#b22").is(":visible"))
+								{
+									$("#a22").show();
+									$("#b22").hide();
+									$("#a32").hide();
+									$("#b32").show();
+								}
 							},(((100-$x)*500)+1000));
 							setTimeout(function(){
-								$("#a32").show();
-								$("#b32").hide();
-								$("#a42").hide();
-								$("#b42").show();
+								if($flag==1 && $("#b32").is(":visible"))
+								{
+									$("#a32").show();
+									$("#b32").hide();
+									$("#a42").hide();
+									$("#b42").show();
+								}
 							},(((100-$x)*500)+1500));
 							setTimeout(function(){
-								$("#a42").show();
-								$("#b42").hide();
+								if($flag==1 && $("#b42").is(":visible"))
+								{
+									$("#aR2").show();
+									$("#b42").hide();
+									$flag=0;
+								}
 							},(((100-$x)*500)+2000));
 						}
 						if($random==2)
-						{							
+						{				
 							setTimeout(function(){
-								$("#a13").hide();
-								$("#b13").show();
+								if($flag==1)
+								{
+									$("#a13").hide();
+									$("#b13").show();
+								}
 							},(((100-$x)*500)+0));
 							setTimeout(function(){
-								$("#a13").show();
-								$("#b13").hide();
-								$("#a23").hide();
-								$("#b23").show();
+								if($flag==1 && $("#b13").is(":visible"))
+								{
+									$("#a13").show();
+									$("#b13").hide();
+									$("#a23").hide();
+									$("#b23").show();
+								}
 							},(((100-$x)*500)+500));
 							setTimeout(function(){
-								$("#a23").show();
-								$("#b23").hide();
-								$("#a33").hide();
-								$("#b33").show();
+								if($flag==1 && $("#b23").is(":visible"))
+								{
+									$("#a23").show();
+									$("#b23").hide();
+									$("#a33").hide();
+									$("#b33").show();
+								}
 							},(((100-$x)*500)+1000));
 							setTimeout(function(){
-								$("#a33").show();
-								$("#b33").hide();
-								$("#a43").hide();
-								$("#b43").show();
+								if($flag==1 && $("#b33").is(":visible"))
+								{
+									$("#a33").show();
+									$("#b33").hide();
+									$("#a43").hide();
+									$("#b43").show();
+								}
 							},(((100-$x)*500)+1500));
 							setTimeout(function(){
-								$("#a43").show();
-								$("#b43").hide();
+								if($flag==1 && $("#b43").is(":visible"))
+								{
+									$("#aR3").show();
+									$("#b43").hide();
+									$flag=0;
+								}
 							},(((100-$x)*500)+2000));
 						}
 					}
+				});
+				$("#b11").click(function(){
+					$(this).hide();
+					$("#a11").show();
+				});
+				$("#b12").click(function(){
+					$(this).hide();
+					$("#a12").show();
+				});
+				$("#b13").click(function(){
+					$(this).hide();
+					$("#a13").show();
+				});
+				$("#b21").click(function(){
+					$(this).hide();
+					$("#a21").show();
+				});
+				$("#b22").click(function(){
+					$(this).hide();
+					$("#a22").show();
+				});
+				$("#b23").click(function(){
+					$(this).hide();
+					$("#a23").show();
+				});
+				$("#b31").click(function(){
+					$(this).hide();
+					$("#a31").show();
+				});
+				$("#b32").click(function(){
+					$(this).hide();
+					$("#a32").show();
+				});
+				$("#b33").click(function(){
+					$(this).hide();
+					$("#a33").show();
+				});
+				$("#b41").click(function(){
+					$(this).hide();
+					$("#a41").show();
+				});
+				$("#b42").click(function(){
+					$(this).hide();
+					$("#a42").show();
+				});
+				$("#b43").click(function(){
+					$(this).hide();
+					$("#a43").show();
 				});
 			});	
 		</script>
@@ -153,10 +259,13 @@
 			<div>
 				<img src="black.png" id="b41">
 				<img src="white.png" id="a41">
+				<img src="red.png" id="aR1">
 				<img src="black.png" id="b42">
 				<img src="white.png" id="a42">
+				<img src="red.png" id="aR2">
 				<img src="black.png" id="b43">
 				<img src="white.png" id="a43">
+				<img src="red.png" id="aR3">
 			</div>
 			<div>
 				<img src="black.png" id="b31">
