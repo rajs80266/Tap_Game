@@ -117,6 +117,7 @@
 					}	
 				});
 				$("#btn").click(function(){
+					$("#myAudio").play(); 
 					$x=100;
 					$y=100;		//all available
 					//$y=90;	//1 not available
@@ -224,6 +225,12 @@
 								if($flag==1 && $("#b41").is(":visible"))
 								{
 									$("#aR1").show();
+									$("#a11").hide();
+									$("#b11").hide();
+									$("#a12").hide();
+									$("#b12").hide();
+									$("#a13").hide();
+									$("#b13").hide();
 									$("#btnr").show();
 									$("#b41").hide();
 									$flag=0;
@@ -270,6 +277,12 @@
 								if($flag==1 && $("#b42").is(":visible"))
 								{
 									$("#aR2").show();
+									$("#a11").hide();
+									$("#b11").hide();
+									$("#a12").hide();
+									$("#b12").hide();
+									$("#a13").hide();
+									$("#b13").hide();
 									$("#btnr").show();
 									$("#b42").hide();
 									$flag=0;
@@ -316,6 +329,12 @@
 								if($flag==1 && $("#b43").is(":visible"))
 								{
 									$("#aR3").show();
+									$("#a11").hide();
+									$("#b11").hide();
+									$("#a12").hide();
+									$("#b12").hide();
+									$("#a13").hide();
+									$("#b13").hide();
 									$("#btnr").show();
 									$("#b43").hide();
 									$flag=0;
@@ -378,5 +397,8 @@
 				  <input type="radio" name="Level" id="d" > Difficult
 			</form>
 			</center>
+			<audio id="myAudio" controls>
+				<source src="piano.mp3" type="audio/mpeg">
+			</audio>
 	</body>
 </html>
